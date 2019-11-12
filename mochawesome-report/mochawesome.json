@@ -1,0 +1,156 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2019-11-12T03:11:49.077Z",
+    "end": "2019-11-12T03:11:51.291Z",
+    "duration": 2214,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "e0c96ebc-fdde-4f1c-92f0-a606e78e0bca",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "5d53e067-aa0b-426e-82b7-3df591c7bba6",
+        "title": "Testing the API in mocha, chai framework",
+        "fullFile": "/Users/varunsenthilkumar/Documents/mocha-booking/test/api_test.js",
+        "file": "/test/api_test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "Testing the API in mocha, chai framework \"before all\" hook",
+            "timedOut": false,
+            "duration": 2199,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "response = await call_booking_api(test_data);\nbody = response.body;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "bc3a560f-90e9-4768-afb4-50e3bb5ded31",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "status code is 200",
+            "fullTitle": "Testing the API in mocha, chai framework status code is 200",
+            "timedOut": false,
+            "duration": 1,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "expect(response.status).to.equal(200);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "70e15538-1041-440e-871d-d6e51a5aead1",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "firstname and lastname are correct",
+            "fullTitle": "Testing the API in mocha, chai framework firstname and lastname are correct",
+            "timedOut": false,
+            "duration": 2,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "expect(body.firstname).to.equal(test_data.firstname);\nexpect(body.lastname).to.equal(test_data.lastname);",
+            "err": {
+              "message": "AssertionError: expected 'Mark' to equal 'Eric'",
+              "estack": "AssertionError: expected 'Mark' to equal 'Eric'\n    at Context.<anonymous> (test/api_test.js:33:39)",
+              "diff": "- Mark\n+ Eric\n"
+            },
+            "isRoot": false,
+            "uuid": "a35e2d88-cc8a-4664-8b72-914a9fccfafc",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "totalprice value is correct",
+            "fullTitle": "Testing the API in mocha, chai framework totalprice value is correct",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "expect(body.totalprice).to.equal(test_data.totalprice);",
+            "err": {
+              "message": "AssertionError: expected 149 to equal 605",
+              "estack": "AssertionError: expected 149 to equal 605\n    at Context.<anonymous> (test/api_test.js:38:40)",
+              "diff": "- 149\n+ 605\n"
+            },
+            "isRoot": false,
+            "uuid": "7748f413-86c4-41c8-97f1-e4a359da6903",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "depositpaid flag is correct",
+            "fullTitle": "Testing the API in mocha, chai framework depositpaid flag is correct",
+            "timedOut": false,
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "expect(body.depositpaid).to.equal(test_data.depositpaid);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "67e8f30a-c77c-45cc-9321-85d43fc641b2",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "70e15538-1041-440e-871d-d6e51a5aead1",
+          "67e8f30a-c77c-45cc-9321-85d43fc641b2"
+        ],
+        "failures": [
+          "a35e2d88-cc8a-4664-8b72-914a9fccfafc",
+          "7748f413-86c4-41c8-97f1-e4a359da6903"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 3,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 200000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 200000
+  },
+  "copyrightYear": 2019
+}
